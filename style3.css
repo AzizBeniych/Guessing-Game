@@ -27,7 +27,7 @@ nav{
 } */
 #info_icon{
     color: white;
-    margin-left: 10cm;
+    margin-left: 14cm;
     font-size: 30px;
     cursor: pointer;
 }
@@ -49,10 +49,10 @@ nav{
 }
 .users{
     color: white;
-    margin-left: 20cm;
+    margin-left: 18cm;
     font-size: 30px;
     cursor: pointer;
-    margin-top: -36px;
+    margin-top: -30px;
 }
 .users:hover{
     color: #007CBF;
