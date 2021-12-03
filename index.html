@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>jeu</title>
+</head>
+<body>
+    <nav>
+    <a href="#"><img src="LOGOG.png" id="logog"></a>
+    <!-- <span class="icon_nav"><i class="fas fa-info-circle"></i> <i class="fas fa-redo-alt"></i> <i class="fas fa-users"></i></span> -->
+
+   
+   <div  class="info"> <a href="index2.html"> <i class="fas fa-info" id="info_icon"> </i> </a> </div>
+   <div class="redo"> <i class="fas fa-heart"></i></div>
+   <div class="users"> <a href="index3.html"> <i class="fas fa-users"></i> </a> </div>
+   <div class="exit"> <i class="fas fa-sign-out-alt" id="exit_icon"></i></div>
+</nav>
+    <div class="header_content">
+<h1 id="guiss">GUESSING GAME</h1>
+<h4>Enter Number From 1 To 100</h4>
+<form>
+    <input type="text" id="goinput" placeholder="Write Your Number Here" style="color: aliceblue;"><br>
+    <input type="button" id="btn" value="GO" onclick="guess()">
+    
+</form>
+<img src="background.jpg" id="background">
+</div>
+<P id="livs">10</P>
+<p id="message"></p>
+
+<!--
+  TODO: 
+-->
+<script>
+    var input_btn = document.getElementById("goinput");
+    var message = document.getElementById("message");
+    var l = document.getElementById("livs")
+    var n = 10;
+    var rand = Math.floor(Math.random()*100);
+
+    function guess(){
+        if(input_btn.value==rand){
+        message.innerHTML = "Great You Won!";
+        if ( n==10 || n==9){
+            message.innerHTML = "Graet"
+        } 
+
+        }
+        else if(input_btn.value>rand){
+            message.innerHTML = "Too Big!";
+            n--
+            l.innerHTML=n
+        }
+        else{
+            message.innerHTML = "Too Small!";
+            n--
+            l.innerHTML=n
+        }
+        if (n==0){
+            document.getElementById('btn').style.display="none"
+            message.innerHTML = "You Lose"
+        }
+       
+    }
+
+</script>
+<!--
+  TODO: 
+-->
+   <!-- <script>   
+//    Function()
+// var nombre = 30;
+// var s ;
+// var i ;
+   
+// for(var i = 1; i<=10; i++) {
+    // s = prompt("enter number"); 
+    // if(s==nombre){
+        // alert('Congratulations you won')
+        // break;
+    // }
+    // if (s > nombre) {
+        // alert('Unfortunately, the number is Big')
+//    }
+    // if (s < nombre) {
+        // alert('Unfortunately, the number is Small')
+    // }
+
+//   }
+//   if (i>=11){
+    //   alert('go to your home')
+//   }
+
+</script>-->
+<!--
+  TODO: 
+-->
+</body>
+</html>
